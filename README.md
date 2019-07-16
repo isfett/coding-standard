@@ -1,1 +1,1 @@
-# coding-standard
+Isfett Coding Standard
