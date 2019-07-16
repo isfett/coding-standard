@@ -5,7 +5,7 @@
     <!-- There should not be any code in the bundle Resources directory. -->
     <exclude-pattern>*/Resources/*</exclude-pattern>
 
-    <config name="installed_paths" value="../slevomat/coding-standard" />
+    <config name="installed_paths" value="../../slevomat/coding-standard" />
 
     <!-- Standard follows the standards defined in the PSR-0, PSR-1 and PSR-2 documents. -->
 
