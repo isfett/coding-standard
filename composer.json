@@ -14,5 +14,10 @@
   },
   "require": {
     "php": "^7.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "phpmd/phpmd": "*",
+    "slevomat/coding-standard": "~5"
   }
 }
