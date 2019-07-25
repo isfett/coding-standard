@@ -181,12 +181,13 @@
                 "/>
                 <element value="
                     @dataProvider,
+                    @group,
                 "/>
             </property>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectAnnotationsGroup">
-        <message>Group annotations by sort. Annotation-Groups are {@example}, {@param, @var}, {@ORM\, @Serializer\, @MongoDB\, @Assert\, @CustomAssert\}, {@return, @throws}, {@deprecated} and {@dataProvider}. They should be seperated by a single blank line.</message>
+        <message>Group annotations by sort. Annotation-Groups are {@example}, {@param, @var}, {@ORM\, @Serializer\, @MongoDB\, @Assert\, @CustomAssert\}, {@return, @throws}, {@deprecated} and {@dataProvider, @group}. They should be seperated by a single blank line.</message>
     </rule>
 
     <!-- soft line limit 80, hard 120 -->
@@ -194,6 +195,23 @@
         <properties>
             <property name="lineLimit" value="80"/>
             <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+
+    <!-- Ensure 1 blank line before and after functions, except at the top and bottom. -->
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="spacingBeforeFirst" value="0" />
+            <property name="spacingAfterLast" value="0" />
+        </properties>
+    </rule>
+
+    <!-- Ensure 1 blank line between member vars,but don't require blank lines before the first. -->
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="spacingBeforeFirst" value="0" />
         </properties>
     </rule>
 
