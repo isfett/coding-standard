@@ -31,7 +31,6 @@
     <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
     <rule ref="Squiz.Scope.MemberVarScope"/>
     <rule ref="Squiz.Strings.ConcatenationSpacing"/>
-    <!-- added by christopher.stenke -->
     <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
     <rule ref="Squiz.WhiteSpace.ControlStructureSpacing"/>
     <rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
@@ -52,7 +51,6 @@
         <!-- covered by Squiz FunctionDeclarationSniff -->
         <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
 
-        <!-- added by christopher.stenke -->
         <exclude name="Zend.NamingConventions.ValidVariableName.MemberVarContainsNumbers"/>
     </rule>
 
@@ -181,19 +179,18 @@
                 "/>
                 <element value="
                     @dataProvider,
-                    @group,
                 "/>
             </property>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectAnnotationsGroup">
-        <message>Group annotations by sort. Annotation-Groups are {@example}, {@param, @var}, {@ORM\, @Serializer\, @MongoDB\, @Assert\, @CustomAssert\}, {@return, @throws}, {@deprecated} and {@dataProvider, @group}. They should be seperated by a single blank line.</message>
+        <message>Group annotations by sort. Annotation-Groups are {@example}, {@param, @var}, {@ORM\, @Serializer\, @MongoDB\, @Assert\, @CustomAssert\}, {@return, @throws}, {@deprecated} and {@dataProvider}. They should be seperated by a single blank line.</message>
     </rule>
 
-    <!-- soft line limit 80, hard 120 -->
+    <!-- line limit 120 -->
     <rule ref="Generic.Files.LineLength">
         <properties>
-            <property name="lineLimit" value="80"/>
+            <property name="lineLimit" value="120"/>
             <property name="absoluteLineLimit" value="120"/>
         </properties>
     </rule>

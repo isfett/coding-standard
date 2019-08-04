@@ -8,7 +8,7 @@
     </description>
     <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
         <properties>
-            <property name="reportLevel" value="4"/>
+            <property name="reportLevel" value="6"/>
         </properties>
     </rule>
     <rule ref="rulesets/codesize.xml/ExcessiveParameterList" message="The method {1} has {2} parameters. Consider reducing the number of parameters to less than {3}. Maybe use a Data-Access-Object (but not in __construct()).">
@@ -16,7 +16,6 @@
             <property name="minimum" value="5"/>
         </properties>
     </rule>
-    <rule ref="rulesets/controversial.xml"/>
     <rule ref="rulesets/design.xml/ExitExpression"/>
     <rule ref="rulesets/design.xml/EvalExpression"/>
     <rule ref="rulesets/design.xml/GotoStatement"/>
