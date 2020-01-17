@@ -18,6 +18,6 @@
   "require": {
     "php": "^7 | ^8",
     "squizlabs/php_codesniffer": "*",
-    "phpmd/phpmd": "*",
+    "phpmd/phpmd": "*"
   }
 }
