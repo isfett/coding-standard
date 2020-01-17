@@ -12,10 +12,12 @@
   "support": {
     "issues": "https://github.com/isfett/coding-standard/issues"
   },
+  "autoload-dev": {
+    "SlevomatCodingStandard\\": "vendor/stat/coding-standard-php/phpcs/SlevomatCodingStandard"
+  },
   "require": {
     "php": "^7 | ^8",
     "squizlabs/php_codesniffer": "*",
     "phpmd/phpmd": "*",
-    "slevomat/coding-standard": "~5"
   }
 }

@@ -5,8 +5,6 @@
     <!-- There should not be any code in the bundle Resources directory. -->
     <exclude-pattern>*/Resources/*</exclude-pattern>
 
-    <config name="installed_paths" value="../../slevomat/coding-standard" />
-
     <!-- Standard follows the standards defined in the PSR-0, PSR-1 and PSR-2 documents. -->
 
     <!-- Include the whole PSR-1 standard -->
@@ -54,7 +52,7 @@
         <exclude name="Zend.NamingConventions.ValidVariableName.MemberVarContainsNumbers"/>
     </rule>
 
-    <rule ref="Symfony/ruleset.xml">
+    <rule ref="./Symfony/ruleset.xml">
         <exclude name="Symfony.Commenting.License"/>
         <exclude name="Symfony.Commenting.Annotations.Invalid"/>
         <!-- @see https://github.com/djoos/Symfony-coding-standard/issues/120 -->
@@ -70,6 +68,36 @@
         <exclude name="Symfony.Formatting.BlankLineBeforeReturn.Invalid"/>
 
         <exclude name="Symfony.Functions.Arguments.Invalid"/>
+    </rule>
+
+    <rule ref="./SlevomatCodingStandard/ruleset.xml">
+        <exclude name="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces.NoEmptyLineAfterOpeningBrace" />
+        <exclude name="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces.NoEmptyLineBeforeClosingBrace" />
+        <exclude name="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint.UselessDocComment" />
+        <exclude name="SlevomatCodingStandard.Namespaces.UseOnlyWhitelistedNamespaces.NonFullyQualified" />
+        <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName.NoMatchBetweenTypeNameAndFileName" />
+        <exclude name="SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter" />
+        <exclude name="SlevomatCodingStandard.Namespaces.UnusedUses.UnusedUse" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation.NonFullyQualifiedClassName" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison.DisallowedYodaComparison" />
+        <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountBeforeFirstUse" />
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.ControlStructureSpacing.IncorrectLinesCountBeforeControlStructure" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses.UselessParentheses" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming.SuperfluousPrefix" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousTraitNaming.SuperfluousSuffix" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming.SuperfluousSuffix" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions.NonFullyQualified" />
+        <exclude name="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment" />
+        <exclude name="SlevomatCodingStandard.Functions.TrailingCommaInCall.MissingTrailingComma" /> <!-- no php 7.2 yet -->
+        <exclude name="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses.IncorrectlyOrderedUses" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions.NonFullyQualifiedException" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator.MultiLineTernaryOperatorNotUsed" />
+        <exclude name="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants.DisallowedLateStaticBindingForConstant" />
+        <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPostIncrementOperator" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.RequireTernaryOperator.TernaryOperatorNotUsed" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition.AssignmentInCondition" />
     </rule>
 
     <!-- Don't enforce Zend's private member underscores -->
@@ -215,6 +243,9 @@
     <rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
         <severity>0</severity>
     </rule>
+
+    <!-- warn for not used early exists -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit.EarlyExitNotUsed" />
 
     <!-- 7.0 -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator" />
