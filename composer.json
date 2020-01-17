@@ -13,7 +13,7 @@
     "issues": "https://github.com/isfett/coding-standard/issues"
   },
   "autoload-dev": {
-    "SlevomatCodingStandard\\": "vendor/stat/coding-standard-php/phpcs/SlevomatCodingStandard"
+    "SlevomatCodingStandard\\": "vendor/isfett/coding-standard/phpcs/SlevomatCodingStandard"
   },
   "require": {
     "php": "^7 | ^8",
