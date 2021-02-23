@@ -1,5 +1,5 @@
 <profile version="1.0">
-  <option name="myName" value="Statista" />
+  <option name="myName" value="Isfett" />
   <inspection_tool class="BadExceptionsProcessingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
   <inspection_tool class="ComparisonOperandsOrderInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
   <inspection_tool class="ForeachSourceInspection" enabled="true" level="WARNING" enabled_by_default="true" />
